@@ -33,15 +33,13 @@
     <script src="https://accounts.google.com/gsi/client" async></script>
 <script>
       function handleCredentialResponse(response) {
-
+        window.location.href = "https://fascinating-fenglisu-5c0ffd.netlify.app/full_project/";
       }
 
       window.onload = function () {
         google.accounts.id.initialize({
           client_id: "120188328850-39f6s0bba0t26iog4n4avo0512fefeq3.apps.googleusercontent.com",
           callback: handleCredentialResponse,
-          ux_mode: "redirect",
-          redirect_uri: "https://fascinating-fenglisu-5c0ffd.netlify.app/full_project/",
         });
 
         google.accounts.id.renderButton(
