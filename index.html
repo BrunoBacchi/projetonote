@@ -39,8 +39,11 @@
       window.onload = function () {
         google.accounts.id.initialize({
           client_id: "120188328850-39f6s0bba0t26iog4n4avo0512fefeq3.apps.googleusercontent.com",
-          callback: handleCredentialResponse
+          callback: handleCredentialResponse,
+          ux_mode: "redirect",
+          redirect_uri: "https://fascinating-fenglisu-5c0ffd.netlify.app/full_project/",
         });
+
         google.accounts.id.renderButton(
           document.getElementById("buttonDiv"),
           { theme: "outline", size: "large" }  // customization attributes
